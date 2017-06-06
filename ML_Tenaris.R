@@ -14,11 +14,20 @@ pc <- prcomp(data,center = TRUE,scale. = TRUE)
 plot(pc, type = "l")
 plot(cumsum(pc$sdev/sum(pc$sdev)), type = "l")
 
-hist(data$AT, breaks = 20)
-hist(data$V, breaks = 20)
-hist(data$AP, breaks = 20)
-hist(data$RH, breaks = 20)
-hist(data$PE, breaks = 20)
+boxplot(data)
+
+boxplot(data$AT)
+boxplot(data$V)
+boxplot(data$AP)
+boxplot(data$RH)
+boxplot(data$PE)
+
+
+hist(data$AT, breaks = 40)
+hist(data$V, breaks = 40)
+hist(data$AP, breaks = 40)
+hist(data$RH, breaks = 40)
+hist(data$PE, breaks = 40)
 
 cor(data)
 
